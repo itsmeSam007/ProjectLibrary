@@ -1,0 +1,5 @@
+$company_lists = RecordCompany::lists('company_name', 'id');
+
+return View::make('admin.record_new', array('company_lists' => $company_lists));
+
+{{ Form::select('company_id', $company_lists) }}
